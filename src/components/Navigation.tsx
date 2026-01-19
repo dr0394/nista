@@ -41,7 +41,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center group">
             <h1 className="text-3xl font-pub font-bold text-brass-400 tracking-tight">
-              Nista's Schnitzelstube
+              Nista's Schnitzelhaus
             </h1>
           </Link>
 
