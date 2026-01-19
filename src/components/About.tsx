@@ -41,7 +41,7 @@ export default function About() {
               </span>
             </h2>
             <p className="text-xl text-amber-200 font-pub leading-relaxed">
-              Bei Nista's Schnitzelstube vereinen wir traditionelle österreichische Küche
+              Bei Nista's Schnitzelhaus vereinen wir traditionelle österreichische Küche
               mit modernem Service. Unser Ziel ist es, Ihnen nicht nur hervorragendes Essen
               zu servieren, sondern ein unvergessliches kulinarisches Erlebnis zu bieten.
             </p>
