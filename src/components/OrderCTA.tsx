@@ -8,44 +8,44 @@ export default function OrderCTA() {
 
   return (
     <>
-      <section id="order" className="py-24 bg-wood-800 wood-grain relative overflow-hidden">
+      <section id="order" className="py-24 bg-dark-900 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-block mb-4">
-              <span className="text-brass-400 text-2xl font-pub">━━━</span>
+            <div className="inline-block bg-brand-500 text-white px-6 py-3 rounded-full text-sm font-black tracking-[0.3em] uppercase mb-8">
+              Bestell Jetzt
             </div>
-            <h2 className="text-5xl md:text-7xl font-pub font-bold text-amber-100 mb-6">
-              Jetzt bestellen
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight uppercase">
+              JETZT BESTELLEN
             </h2>
-            <p className="text-2xl md:text-3xl text-amber-200 font-pub italic max-w-2xl mx-auto">
+            <p className="text-2xl md:text-3xl text-gray-300 font-bold max-w-2xl mx-auto">
               Liefern lassen, abholen oder vor Ort genießen
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
-            <div className="bg-leather-800 leather-texture border-2 border-brass-600 p-8 hover:shadow-2xl hover:scale-105 transition-all">
+            <div className="bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl p-8 hover:shadow-2xl hover:scale-105 transition-all">
               <div className="text-5xl mb-4">🚗</div>
-              <h3 className="text-2xl font-pub font-bold text-brass-400 mb-3">Lieferung</h3>
-              <p className="text-amber-100 font-pub">Warm und frisch in 30-45 Minuten</p>
+              <h3 className="text-2xl font-black text-white mb-3 uppercase">Lieferung</h3>
+              <p className="text-white/90 font-medium">Warm und frisch in 30-45 Minuten</p>
             </div>
 
-            <div className="bg-leather-800 leather-texture border-2 border-brass-600 p-8 hover:shadow-2xl hover:scale-105 transition-all">
+            <div className="bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl p-8 hover:shadow-2xl hover:scale-105 transition-all">
               <div className="text-5xl mb-4">🥡</div>
-              <h3 className="text-2xl font-pub font-bold text-brass-400 mb-3">Abholung</h3>
-              <p className="text-amber-100 font-pub">Vorbestellen und direkt abholen</p>
+              <h3 className="text-2xl font-black text-white mb-3 uppercase">Abholung</h3>
+              <p className="text-white/90 font-medium">Vorbestellen und direkt abholen</p>
             </div>
 
-            <div className="bg-leather-800 leather-texture border-2 border-brass-600 p-8 hover:shadow-2xl hover:scale-105 transition-all">
+            <div className="bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl p-8 hover:shadow-2xl hover:scale-105 transition-all">
               <div className="text-5xl mb-4">🍽️</div>
-              <h3 className="text-2xl font-pub font-bold text-brass-400 mb-3">Vor Ort</h3>
-              <p className="text-amber-100 font-pub">Genieße unser Ambiente</p>
+              <h3 className="text-2xl font-black text-white mb-3 uppercase">Vor Ort</h3>
+              <p className="text-white/90 font-medium">Genieße unser Ambiente</p>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button
               onClick={() => setIsOrderOpen(true)}
-              className="group px-12 py-6 bg-brass-500 text-wood-900 font-pub font-bold text-xl hover:bg-brass-400 transition-all shadow-2xl hover:scale-105 flex items-center justify-center border-2 border-brass-600"
+              className="group px-12 py-6 bg-brand-500 text-white rounded-full font-black text-xl hover:bg-brand-600 transition-all shadow-2xl hover:scale-105 flex items-center justify-center uppercase"
             >
               <ShoppingBag className="w-7 h-7 mr-3 group-hover:scale-110 transition-transform" />
               Online bestellen
@@ -53,15 +53,15 @@ export default function OrderCTA() {
 
             <button
               onClick={() => setIsReservationOpen(true)}
-              className="group px-12 py-6 border-2 border-brass-500 text-brass-400 font-pub font-bold text-xl hover:bg-brass-500 hover:text-wood-900 transition-all flex items-center justify-center"
+              className="group px-12 py-6 border-4 border-brand-500 text-brand-500 rounded-full font-black text-xl hover:bg-brand-500 hover:text-white transition-all flex items-center justify-center uppercase"
             >
               <Calendar className="w-7 h-7 mr-3 group-hover:scale-110 transition-transform" />
               Tisch reservieren
             </button>
           </div>
 
-          <p className="text-center text-amber-200 font-pub font-bold mt-10 text-lg">
-            Oder ruf uns an: <a href="tel:+4912345678" className="text-brass-400 hover:text-brass-300 underline hover:no-underline">+49 123 456 78</a>
+          <p className="text-center text-gray-300 font-bold mt-10 text-lg">
+            Oder ruf uns an: <a href="tel:+4912345678" className="text-brand-500 hover:text-brand-400 underline hover:no-underline">+49 123 456 78</a>
           </p>
         </div>
       </section>

@@ -10,7 +10,6 @@ export default function MenuOverview() {
   }, []);
 
   const fetchCategories = async () => {
-    if (!supabase) return;
     const { data } = await supabase
       .from('menu_categories')
       .select('*')
@@ -37,16 +36,14 @@ export default function MenuOverview() {
   };
 
   return (
-    <section id="menu" className="py-24 bg-wood-800 wood-grain">
+    <section id="menu" className="py-24 bg-dark-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-brass-400 text-2xl font-pub">━━━</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-pub font-bold text-amber-100 mb-4">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight uppercase">
+            <span className="block text-xl md:text-2xl font-bold mb-4 text-brand-400 tracking-wide">Unser Angebot</span>
             Unsere Speisekarte
           </h2>
-          <p className="text-xl md:text-2xl text-amber-200 font-pub italic max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 font-medium max-w-2xl mx-auto">
             Von klassischen Schnitzeln bis zu saftigen Burgern
           </p>
         </div>
@@ -55,13 +52,13 @@ export default function MenuOverview() {
           {categories.map((category, index) => (
             <div
               key={category.id}
-              className="bg-leather-800 leather-texture border-2 border-brass-600 p-8 hover:shadow-2xl hover:scale-105 transition-all group cursor-pointer"
+              className="bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl p-8 hover:shadow-2xl hover:scale-105 transition-all group cursor-pointer"
             >
               <div className="text-6xl mb-4">{categoryIcons[index] || '🍽️'}</div>
-              <h3 className="text-2xl font-pub font-bold text-brass-400 mb-2">
+              <h3 className="text-2xl font-black text-white mb-2 uppercase">
                 {category.name}
               </h3>
-              <p className="text-amber-100 font-pub">{category.description}</p>
+              <p className="text-white/90 font-medium">{category.description}</p>
             </div>
           ))}
         </div>
@@ -69,7 +66,7 @@ export default function MenuOverview() {
         <div className="text-center">
           <button
             onClick={() => scrollToSection('bestsellers')}
-            className="inline-flex items-center px-10 py-5 bg-brass-500 text-wood-900 font-pub font-bold text-xl hover:bg-brass-400 transition-all shadow-xl hover:scale-105 border-2 border-brass-600"
+            className="inline-flex items-center px-10 py-5 bg-white text-brand-600 rounded-full font-black text-xl hover:bg-gray-100 transition-all shadow-xl hover:scale-105 uppercase"
           >
             Zu den Bestsellern
             <ChevronRight className="ml-2 w-6 h-6" />

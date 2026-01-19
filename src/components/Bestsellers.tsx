@@ -10,7 +10,6 @@ export default function Bestsellers() {
   }, []);
 
   const fetchBestsellers = async () => {
-    if (!supabase) return;
     const { data } = await supabase
       .from('menu_items')
       .select('*')
@@ -31,17 +30,14 @@ export default function Bestsellers() {
   ];
 
   return (
-    <section id="bestsellers" className="py-24 bg-wood-900 relative overflow-hidden">
-      <div className="absolute inset-0 wood-grain opacity-20"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="bestsellers" className="py-24 bg-dark-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-brass-400 text-2xl font-pub">━━━</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-pub font-bold text-amber-100 mb-4">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight uppercase">
+            <span className="block text-xl md:text-2xl font-bold mb-4 text-brand-400 tracking-wide">Bestseller</span>
             Unsere Hits
           </h2>
-          <p className="text-xl md:text-2xl text-amber-200 font-pub italic max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 font-medium max-w-2xl mx-auto">
             Diese Gerichte lieben unsere Gäste besonders
           </p>
         </div>
@@ -50,7 +46,7 @@ export default function Bestsellers() {
           {bestsellers.map((item, index) => (
             <div
               key={item.id}
-              className="bg-leather-800 leather-texture border-2 border-brass-600 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+              className="bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
             >
               <div className="relative overflow-hidden h-64">
                 <img
@@ -58,21 +54,21 @@ export default function Bestsellers() {
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-wood-900/95 via-wood-900/60 to-transparent"></div>
-                <div className="absolute top-4 right-4 bg-brass-500 text-wood-900 px-4 py-2 text-sm font-pub font-bold flex items-center shadow-lg border-2 border-brass-600">
-                  <Star className="w-5 h-5 mr-1 fill-wood-900" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
+                <div className="absolute top-4 right-4 bg-white text-brand-600 px-4 py-2 rounded-full text-sm font-black flex items-center shadow-lg uppercase">
+                  <Star className="w-5 h-5 mr-1 fill-brand-600" />
                   Beliebt
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-pub font-bold text-brass-400 mb-2">{item.name}</h3>
-                <p className="text-amber-100 font-pub mb-4 line-clamp-2">{item.description}</p>
+                <h3 className="text-2xl font-black text-white mb-2 uppercase">{item.name}</h3>
+                <p className="text-white/90 font-medium mb-4 line-clamp-2">{item.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-3xl font-pub font-bold text-brass-400">
+                  <span className="text-3xl font-black text-white">
                     {item.price.toFixed(2)} €
                   </span>
                   {item.is_vegetarian && (
-                    <span className="bg-brass-500 text-wood-900 px-3 py-1 text-sm font-pub font-bold border-2 border-brass-600">
+                    <span className="bg-white text-brand-600 px-3 py-1 rounded-full text-sm font-bold uppercase">
                       Veggie
                     </span>
                   )}

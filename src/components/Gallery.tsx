@@ -27,16 +27,14 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-24 bg-wood-800 wood-grain">
+    <section className="py-24 bg-dark-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-brass-400 text-2xl font-pub">━━━</span>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-pub font-bold text-amber-100 mb-4">
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 tracking-tight uppercase">
+            <span className="block text-xl md:text-2xl font-bold mb-4 text-brand-400 tracking-wide">Galerie</span>
             Unser Restaurant
           </h2>
-          <p className="text-xl md:text-2xl text-amber-200 font-pub italic max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 font-medium max-w-2xl mx-auto">
             Ein Blick in unsere gemütlichen Räumlichkeiten
           </p>
         </div>
@@ -45,16 +43,16 @@ export default function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden aspect-[4/3] border-4 border-brass-600 hover:border-brass-400 hover:shadow-2xl hover:scale-105 transition-all"
+              className="relative group overflow-hidden rounded-2xl aspect-[4/3] border-4 border-brand-500/50 hover:border-brand-500 hover:shadow-2xl hover:scale-105 transition-all"
             >
               <img
                 src={image.url}
                 alt={image.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-wood-900/90 via-wood-900/60 to-transparent">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-brass-400 font-pub font-bold text-2xl">{image.title}</h3>
+                  <h3 className="text-white font-black text-2xl uppercase">{image.title}</h3>
                 </div>
               </div>
             </div>

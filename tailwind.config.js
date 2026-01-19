@@ -4,37 +4,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        wood: {
-          900: '#1a0f0a',
-          800: '#2d1810',
-          700: '#3d2415',
-          600: '#4d301a',
-          500: '#5d3c20',
-          400: '#8b5a2b',
+        dark: {
+          900: '#0a0a0a',
+          800: '#1a1a1a',
+          700: '#2a2a2a',
+          600: '#3a3a3a',
         },
-        brass: {
-          400: '#d4af37',
-          500: '#c5a028',
-          600: '#b8941e',
+        brand: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
         },
-        leather: {
-          900: '#2d1810',
-          800: '#3d2010',
-          700: '#4d2810',
-          600: '#5d3010',
-        },
-        beer: {
-          400: '#f4a542',
-          500: '#e8952c',
-          600: '#d88420',
+        gold: {
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
         },
       },
       fontFamily: {
-        display: ['Georgia', 'serif'],
-        pub: ['Georgia', 'Times New Roman', 'serif'],
-      },
-      backgroundImage: {
-        'wood-texture': "url('data:image/svg+xml,%3Csvg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noise\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"4\" /%3E%3C/filter%3E%3Crect width=\"100\" height=\"100\" filter=\"url(%23noise)\" opacity=\"0.05\" /%3E%3C/svg%3E')",
+        display: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
