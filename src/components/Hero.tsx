@@ -15,7 +15,7 @@ export default function Hero() {
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/8477881/pexels-photo-8477881.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          src="https://plus.unsplash.com/premium_photo-1668618296698-a2e8e36eefeb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2Nobml0emVsfGVufDB8fDB8fHww"
           alt="Köstliches Schnitzel"
           className="w-full h-full object-cover"
         />
