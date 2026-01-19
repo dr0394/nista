@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-4xl font-pub font-bold mb-4 text-brass-400">Nista's Schnitzelstube</h3>
+            <h3 className="text-4xl font-pub font-bold mb-4 text-brass-400">Nista's Schnitzelhaus</h3>
             <p className="text-amber-200 mb-6 leading-relaxed font-pub text-lg">
               Seit über 15 Jahren servieren wir authentische österreichische Küche
               mit Leidenschaft und Qualität. Besuch uns oder bestell online!
