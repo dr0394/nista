@@ -120,7 +120,7 @@ export default function Footer() {
         <div className="border-t-2 border-wood-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-amber-300 font-pub font-semibold">
-              © {new Date().getFullYear()} Nista's Schnitzelstube. Alle Rechte vorbehalten.
+              © {new Date().getFullYear()} Nista's Schnitzelhaus. Alle Rechte vorbehalten.
             </p>
             <p className="text-amber-300 font-pub font-semibold">
               Hauptstraße 123, 12345 Musterstadt | <a href="tel:+4912345678" className="hover:text-brass-400 transition-colors">+49 123 456 78</a>
