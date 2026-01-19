@@ -23,7 +23,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   const isLegalPage = location.pathname === '/impressum' || location.pathname === '/datenschutz';
 
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-wood-900">
       {!isLegalPage && <Navigation />}
       {children}
       <Footer />

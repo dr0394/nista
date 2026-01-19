@@ -73,18 +73,18 @@ export default function OrderForm({ isOpen, onClose, type }: OrderFormProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
-        <div className="sticky top-0 bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6 flex items-center justify-between rounded-t-2xl">
+    <div className="fixed inset-0 bg-wood-900/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-wood-800 border-4 border-brass-600 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+        <div className="sticky top-0 bg-leather-800 leather-texture text-white p-6 flex items-center justify-between border-b-4 border-brass-600">
           <div>
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl font-pub font-bold text-brass-400">
               {type === 'order' ? 'Jetzt bestellen' : 'Tisch reservieren'}
             </h2>
-            <p className="text-amber-100 text-sm">Schritt {step} von 3</p>
+            <p className="text-amber-200 text-sm font-pub">Schritt {step} von 3</p>
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+            className="p-2 hover:bg-brass-500/20 transition-colors text-brass-400"
           >
             <X className="w-6 h-6" />
           </button>
@@ -94,14 +94,14 @@ export default function OrderForm({ isOpen, onClose, type }: OrderFormProps) {
           <div className="flex justify-between mb-8">
             {[1, 2, 3].map((s) => (
               <div key={s} className="flex items-center flex-1">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  s <= step ? 'bg-amber-600 text-white' : 'bg-gray-200 text-gray-400'
+                <div className={`w-10 h-10 flex items-center justify-center font-pub font-bold ${
+                  s <= step ? 'bg-brass-500 text-wood-900 border-2 border-brass-600' : 'bg-wood-700 text-amber-300 border-2 border-wood-600'
                 }`}>
                   {s}
                 </div>
                 {s < 3 && (
                   <div className={`flex-1 h-1 mx-2 ${
-                    s < step ? 'bg-amber-600' : 'bg-gray-200'
+                    s < step ? 'bg-brass-500' : 'bg-wood-700'
                   }`}></div>
                 )}
               </div>
@@ -111,10 +111,10 @@ export default function OrderForm({ isOpen, onClose, type }: OrderFormProps) {
           <form onSubmit={handleSubmit}>
             {step === 1 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Ihre Kontaktdaten</h3>
+                <h3 className="text-xl font-pub font-bold text-brass-400 mb-4">Ihre Kontaktdaten</h3>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-sm font-pub font-semibold text-amber-200 mb-2">
                     <User className="inline w-4 h-4 mr-2" />
                     Name
                   </label>
@@ -123,7 +123,7 @@ export default function OrderForm({ isOpen, onClose, type }: OrderFormProps) {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-amber-600 focus:outline-none"
+                    className="w-full px-4 py-3 border-2 border-brass-600 bg-wood-700 text-amber-100 focus:border-brass-400 focus:outline-none font-pub"
                     placeholder="Ihr Name"
                   />
                 </div>
@@ -328,7 +328,7 @@ export default function OrderForm({ isOpen, onClose, type }: OrderFormProps) {
                 <button
                   type="button"
                   onClick={prevStep}
-                  className="flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                  className="flex-1 px-6 py-3 border-2 border-brass-600 text-brass-400 font-pub font-semibold hover:bg-brass-500/10 transition-colors"
                 >
                   Zurück
                 </button>
@@ -337,14 +337,14 @@ export default function OrderForm({ isOpen, onClose, type }: OrderFormProps) {
                 <button
                   type="button"
                   onClick={nextStep}
-                  className="flex-1 px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-700 transition-colors"
+                  className="flex-1 px-6 py-3 bg-brass-500 text-wood-900 font-pub font-semibold hover:bg-brass-400 transition-colors border-2 border-brass-600"
                 >
                   Weiter
                 </button>
               ) : (
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="flex-1 px-6 py-3 bg-green-600 text-white font-pub font-semibold hover:bg-green-700 transition-colors border-2 border-green-700"
                 >
                   Über WhatsApp senden
                 </button>
