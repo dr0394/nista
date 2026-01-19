@@ -32,7 +32,7 @@ export default function Hero() {
 
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-pub font-bold text-brass-400 mb-6 leading-tight drop-shadow-2xl">
           Nista's
-          <span className="block text-5xl md:text-6xl lg:text-7xl text-amber-200 mt-2">Schnitzelstube</span>
+          <span className="block text-5xl md:text-6xl lg:text-7xl text-amber-200 mt-2">Schnitzelhaus</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-amber-100 font-pub font-medium mb-12 max-w-2xl mx-auto italic">
